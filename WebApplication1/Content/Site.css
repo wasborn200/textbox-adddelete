@@ -28,6 +28,7 @@ textarea {
     margin-left: 100px;
 }
 .input-field{
+    display: flex;
     margin-top: 20px;
 }
 #inputfield2, #inputfield3, #inputfield4{

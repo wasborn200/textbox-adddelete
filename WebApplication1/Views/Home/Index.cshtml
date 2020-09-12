@@ -1,39 +1,65 @@
-﻿
+﻿@model WebApplication1.Models.HomeViewModel
 
 <div class="container-fluid test-field">
-    <div class="row">
+    <div class="row  flex-wrap">
         <div class="col-1"></div>
         <div class="col-10">
-
-
             <div class="row input-field" id="inputfield1">
-                <div class="col-6">
-                    1：<input id="input1" type="text" name="name" size="40">
+                <div class="col-4">
+                    1：<input id="input1" type="text" name="name"  size="40">
                 </div>
-                <div class="col-6">
+                <div class="col-4">
+                        @Html.DropDownListFor(model => model.MM,
+                            (IEnumerable<SelectListItem>)ViewBag.SelectOptions,
+                            " 月 ",
+                            new { @id = "mm1" }
+                        )
+                </div>
+                <div class="col-4">
                 </div>
             </div>
             <div class="row input-field" id="inputfield2">
-                <div class="col-6">
+                <div class="col-4">
                     2：<input id="input2" type="text" name="name" size="40">
                 </div>
-                <div class="col-6">
+                <div class="col-4">
+                    @Html.DropDownListFor(model => model.MM,
+                        (IEnumerable<SelectListItem>)ViewBag.SelectOptions,
+                        " 月 ",
+                        new { @id = "mm2" }
+                    )
+                </div>
+                <div class="col-4">
                     <input type="button" value="削除" onclick="clickBtn2(2)" />
                 </div>
             </div>
             <div class="row input-field" id="inputfield3">
-                <div class="col-6">
+                <div class="col-4">
                     3：<input id="input3" type="text" name="name" size="40">
                 </div>
-                <div class="col-6">
+                <div class="col-4">
+                    @Html.DropDownListFor(model => model.MM,
+                        (IEnumerable<SelectListItem>)ViewBag.SelectOptions,
+                        " 月 ",
+                        new { @id = "mm3" }
+                    )
+                </div>
+                <div class="col-4">
                     <input type="button" value="削除" onclick="clickBtn2(3)" />
                 </div>
             </div>
             <div class="row input-field" id="inputfield4">
-                <div class="col-6">
+                <div class="col-4">
                     4：<input id="input4" type="text" name="name" size="40">
                 </div>
-                <div class="col-6">
+                <div class="col-4">
+                    @Html.DropDownListFor(model => model.MM,
+                        (IEnumerable<SelectListItem>)ViewBag.SelectOptions,
+                        " 月 ",
+                        new { @id = "mm4" }
+                    )
+                </div>
+                <div class="col-4">
                     <input type="button" value="削除" onclick="clickBtn2(4)" />
                 </div>
             </div>
