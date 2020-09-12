@@ -8,260 +8,50 @@
 
             <div class="row input-field" id="inputfield1">
                 <div class="col-6">
-                    1：<input type="text" name="name" size="40" placeholder="name">
+                    1：<input id="input1" type="text" name="name" size="40">
                 </div>
                 <div class="col-6">
                 </div>
             </div>
             <div class="row input-field" id="inputfield2">
                 <div class="col-6">
-                    2：<input type="text" name="name" size="40">
+                    2：<input id="input2" type="text" name="name" size="40">
                 </div>
                 <div class="col-6">
-                    <input type="button" value="削除" onclick="clickBtn2()" />
+                    <input type="button" value="削除" onclick="clickBtn2(2)" />
                 </div>
             </div>
             <div class="row input-field" id="inputfield3">
                 <div class="col-6">
-                    3：<input type="text" name="name" size="40">
+                    3：<input id="input3" type="text" name="name" size="40">
                 </div>
                 <div class="col-6">
-                    <input type="button" value="削除" onclick="clickBtn3()" />
+                    <input type="button" value="削除" onclick="clickBtn2(3)" />
                 </div>
             </div>
             <div class="row input-field" id="inputfield4">
                 <div class="col-6">
-                    4：<input type="text" name="name" size="40">
+                    4：<input id="input4" type="text" name="name" size="40">
                 </div>
                 <div class="col-6">
-                    <input type="button" value="削除" onclick="clickBtn4()" />
+                    <input type="button" value="削除" onclick="clickBtn2(4)" />
                 </div>
             </div>
         </div>
+        <div class="row test-field">
+            <div class="col-6">
+                <div id="output_message"></div>
+            </div>
+            <div class="col-3">
 
+                <input type="button" value="追加" onclick="clickBtn1()" />
+            </div>
+        </div>
 
         <div class="col-1"></div>
     </div>
 </div>
 
-<input type="button" value="追加" onclick="clickBtn1()" />
 
-<script>
-    //初期表示は非表示
-    //document.getElementById("inputfield2").style.display = "none";
-    //document.getElementById("inputfield3").style.display = "none";
-    //document.getElementById("inputfield4").style.display = "none";
-
-    var count = 2;
-
-    function clickBtn1() {
-
-        var numberid = 'inputfield' + count;
-        var idname = document.getElementById(numberid);
-        idname.style.display = "flex";
-        count++;
-    }
-
-    
-    function clickBtn2() {
-
-        if (count >= 3) {
-            count--;
-            var numberid = 'inputfield' + count;
-            var idname = document.getElementById(numberid);
-            idname.style.display = "none";
-
-        }
-    }
-
-
-    //for (var i = 2; i < length; i++) {
-
-    //}
-
-    //var numberid = 'inputfield' + count;
-    //var element = document.getElementById(numberid);
-    //element.setAttribute('id', 'sub-title');
-
-
-    //var aElement = document.getElementById("target");
-
-    //// a要素のid属性を変更 ( → <a id="syncer">SYNCER</a> )
-    //aElement.id = "syncer";
-
-    //function clickBtn2() {
-    //    count--;
-        //inputfield2.style.display = "none";
-        //var element = document.getElementById("inputfield2");
-        //element.id = "11";
-        //var element = document.getElementById(inputfield3);
-        //element.id = "inputfield2";
-        //var element = document.getElementById(inputfield4);
-        //element.id = "inputfield3";
-        //$('#inputfield11').after($('#inputfield3'));
-        //var element = document.getElementById(inputfield11);
-        //element.id = "inputfield4";
-    //}
-    //function clickBtn3() {
-    //    count--;
-    //    inputfield3.style.display = "none";
-    //}
-    //function clickBtn4() {
-    //    count--;
-    //    inputfield4.style.display = "none";
-    //}
-
+<script src="~/Scripts/text-adddelete.js">
 </script>
-
-
-@*カウント１ずつ追加
-        count_up_btn.onclick = function (){
-         count_value += 1;
-         count_disp.innerHTML = count_value;
-    };*@
-
-@*10個制限のフォーム追加
-    <script>
-        function myTextAreaAdd(obj) {
-            var max = 10;
-            var objTRs = document.getElementById("table").getElementsByTagName("tr");
-            var tag_num = objTRs.length;
-            var newTR = objTRs[0].cloneNode(true);
-            var objTD = newTR.getElementsByTagName("td")[0];
-            while (n = objTD.lastChild) objTD.removeChild(n);
-            var newTXT = document.createTextNode((++tag_num).toString());
-            objTD.appendChild(newTXT);
-            var nTA = newTR.getElementsByTagName("textarea")[0];
-            nTA.setAttribute("name", "howto" + newTXT);
-            objTRs[0].parentNode.appendChild(newTR);
-            if (tag_num >= max) obj.disabled = true;
-        }
-    </script>
-    <table id="table" summary="">
-        <tr><td>1</td><td><textarea name="howto1"></textarea></td></tr>
-        <tr><td>2</td><td><textarea name="howto2"></textarea></td></tr>
-        <tr><td>3</td><td><textarea name="howto3"></textarea></td></tr>
-        <tr><td>4</td><td><textarea name="howto4"></textarea></td></tr>
-    </table>
-    <input type="button" value="add" onclick="myTextAreaAdd(this)">*@
-
-
-
-
-
-@*<div id="input_pluralBox">
-        <div id="input_plural">
-            <input type="text" class="form-control" placeholder="サンプルテキストサンプルテキストサンプルテキスト">
-            <input type="text" class="form-control" placeholder="サンプルテキストサンプルテキストサンプルテキスト">
-            <input type="text" class="form-control" placeholder="サンプルテキストサンプルテキストサンプルテキスト">
-            <input type="text" class="form-control" placeholder="サンプルテキストサンプルテキストサンプルテキスト">
-            <input type="text" class="form-control" placeholder="サンプルテキストサンプルテキストサンプルテキスト">
-            <input type="text" class="form-control" placeholder="サンプルテキストサンプルテキストサンプルテキスト">
-        </div>
-        <input type="button" value="＋" class="add pluralBtn">
-        <input type="button" value="－" class="del pluralBtn">
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).on("click", ".add", function () {
-            $(this).parent().clone(true).insertAfter($(this).parent());
-        });
-        $(document).on("click", ".del", function () {
-            var target = $(this).parent();
-            if (target.parent().children().length > 1) {
-                target.remove();
-            }
-        });
-    </script>
-
-
-
-    <!doctype html>
-    <html>
-    <head>
-        <meta charset="utf-8">
-        <title>フォーム入力項目を動的に追加・削除【jquery】：サンプル</title>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            $(function () {
-                //追加
-                $('.addformbox').click(function () {
-                    //クローンを変数に格納
-                    var clonecode = $('.box:last').clone(true);
-
-                    //数字を＋１し変数に格納
-                    var cloneno = clonecode.attr('data-formno');
-                    var cloneno2 = parseInt(cloneno) + 1;
-                    var cloneno3 = parseInt(cloneno) + 2;
-
-                    //data属性の数字を＋１
-                    clonecode.attr('data-formno', cloneno2);
-
-                    //数値
-                    clonecode.find('.no').html(cloneno3);
-
-                    //name属性の数字を+1
-                    var namecode = clonecode.find('input.namae').attr('name');
-                    namecode = namecode.replace(/input\[[0-9]{1,2}/g, 'input[' + cloneno2);
-                    clonecode.find('input.namae').attr('name', namecode);
-
-                    var namecode2 = clonecode.find('textarea.toiawase').attr('name');
-                    namecode2 = namecode2.replace(/textarea\[[0-9]{1,2}/g, 'textarea[' + cloneno2);
-                    clonecode.find('textarea.toiawase').attr('name', namecode2);
-
-                    //HTMLに追加
-                    clonecode.insertAfter($('.box:last'));
-                });
-
-
-                //削除
-                $('.deletformbox').click(function () {
-                    //クリックされた削除ボタンの親要素を削除
-                    $(this).parents(".box").remove();
-
-                    var scount = 0;
-                    //番号振り直し
-                    $('.box').each(function () {
-                        var scount2 = scount + 1;
-
-                        //data属性の数字
-                        $(this).attr('data-formno', scount);
-
-                        $('.no', this).html(scount2);
-
-
-                        //input質問タイトル番号振り直し
-                        var name = $('input.namae', this).attr('name');
-                        name = name.replace(/input\[[0-9]{1,2}/g, 'input[' + scount);
-                        $('input.namae', this).attr('name', name);
-
-                        var name2 = $('textarea.toiawase', this).attr('name');
-                        name2 = name2.replace(/textarea\[[0-9]{1,2}/g, 'textarea[' + scount);
-                        $('textarea.toiawase', this).attr('name', name2);
-
-                        scount += 1;
-                    });
-                });
-
-            });
-        </script>
-    </head>
-
-    <body>
-        <div class="box" data-formno="0" style="border:dashed 1px #ccc">
-            <p class="no">1</p>
-            <p>
-                【名前】<br>
-                <input type="text" name="input[0]" class="namae">
-            </p>
-            <p>
-                【お問い合わせ】<br>
-                <textarea name="textarea[0]" cols="30" rows="10" class="toiawase"></textarea>
-            </p>
-            <a class="deletformbox">削除</a>
-        </div>
-        <p><a class="addformbox">追加</a></p>
-
-    </body>
-    </html>*@
