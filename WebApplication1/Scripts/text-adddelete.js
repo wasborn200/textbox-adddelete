@@ -1,4 +1,10 @@
-﻿var count = 2;
+﻿// すでに資格データがある際のinputfield表示条件について
+// var count = @Model.Count;
+// コントローラーでinput1～10のどこまでデータがあるかでcountを決定。
+// それをviewモデルを通じてjavascriptへ伝達
+// 初期表示時にデータがある箇所までinputfieldをopenの状態にする
+
+var count = 2;
 
 function clickBtn1() {
 
