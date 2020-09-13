@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WebApplication1.Models
+namespace WebApplication1.DataModel
 {
-    public class HomeViewModel
+    public class HomeModel
     {
-        public int AccountId { get; set; }
-        public int Count { get; set; }
         public string str1 { get; set; }
         public string MM1 { get; set; }
         public string str2 { get; set; }
